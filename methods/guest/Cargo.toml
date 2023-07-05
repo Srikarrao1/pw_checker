@@ -1,5 +1,5 @@
 [package]
-name = "methods-guest"
+name = "pw_checker"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,4 +9,4 @@ edition = "2021"
 risc0-build = "0.12"
 
 [dependencies]
-risc0-zkvm = { version = "0.12", default-features = false }
+risc0-zkvm = { version = "0.15.3", default-features = false, features=["std"] }
