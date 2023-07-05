@@ -12,9 +12,11 @@ fn main() {
         "Prover should be constructed from valid method source code and corresponding method ID",
     );
 
-    let pw = String::from("password!");
+    let pw = String::from("Gamer!con");
 
     prover.add_input(&to_vec(&pw).unwrap()).unwrap();
+
+
 
     // TODO: Implement communication with the guest here
 
@@ -30,6 +32,6 @@ fn main() {
     // TODO: Implement code for transmitting or serializing the receipt for other parties to verify here
 
     let digest: Digest = from_slice(receipt.get_journal_vec().unwrap()).unwrap();
-    println!("Digest of journal is {}", hex::encode(digest));
-    // println!("we proved this hash {} came from a pw with special characters", digest);
+    // println!("Digest of journal is {}", hex::encode(digest));
+    print!("we proved that the hash {} came from the digest", digest)
 }
