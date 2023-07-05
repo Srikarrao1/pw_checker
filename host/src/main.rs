@@ -32,6 +32,6 @@ fn main() {
     // TODO: Implement code for transmitting or serializing the receipt for other parties to verify here
 
     let digest: Digest = from_slice(receipt.get_journal_vec().unwrap()).unwrap();
-    // println!("Digest of journal is {}", hex::encode(digest));
-    print!("we proved that the hash {} came from the digest", digest)
+    println!("Digest of journal is {}", hex::encode(digest));
+    // print!("we proved that the hash {} came from the digest", digest)
 }
